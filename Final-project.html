@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneStop BookShop</title>
+
+    <link rel="stylesheet" href="./Final-project.css" />
+  </head>
+  <body>
+    <section class="firstpage-container">
+      <header class="header-1">
+        <section class="left-btn">
+          <button class="signIn-btn" id="signInBtn">Sign In</button>
+
+          <button class="register-btn" id="registerBtn">Register</button>
+        </section>
+
+        <section class="right-btn">
+          <button class="checkout-btn" id="checkOutBtn">Checkout</button>
+        </section>
+      </header>
+      <header class="header-2">
+        <img
+          src="https://images.unsplash.com/photo-1491841573634-28140fc7ced7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          id="logo"
+          alt="logo"
+        />
+
+        <nav id="searchNav">
+          <input type="text" id="searchBar" placeholder="Search" />
+          <select name="product-options" id="prodOpt">
+            <option value="All products">All products</option>
+            <option value="Books">Books</option>
+            <option value="e-books">e-books</option>
+            <option value="Magazines">Magazines</option>
+            <option value="Giftcards">Giftcards</option>
+            <option value="Audio-books">Audio-books</option>
+          </select>
+          <img
+            src="https://media.istockphoto.com/id/1266605424/photo/magnifying-glass-3d-rendering.jpg?s=1024x1024&w=is&k=20&c=eOeOqVL0hvZYxRwRb4hv3-VerjfLdghVMWKaBXNqjgg="
+            id="searchImg"
+            alt=""
+          />
+        </nav>
+      </header>
+      <section class="main-category" id="mainCategory">
+        <nav>
+          <ul id="categoryUl">
+            <li><a href="#" id="booksBtn" class="btn">Books</a></li>
+            <li><a href="#" id="ebooksBtn" class="btn">e-Books</a></li>
+            <li><a href="#" id="magazineBtn" class="btn">Magazine</a></li>
+            <li><a href="#" id="stationaryBtn" class="btn">Stationary</a></li>
+            <li><a href="#" id="giftCard" class="btn">Giftcard</a></li>
+          </ul>
+          <ul id="bookList" class="sub-cat">
+            <li>Fiction</li>
+            <li>Non Fiction</li>
+            <li>Kids</li>
+            <li>Academic</li>
+            <li>Popular</li>
+          </ul>
+          <ul id="ebookList" class="sub-cat">
+            <li>Fiction</li>
+            <li>Non Fiction</li>
+            <li>Best Sellers</li>
+            <li>Education</li>
+            <li>Test Books</li>
+          </ul>
+          <ul id="magazineList" class="sub-cat">
+            <li>Life Style</li>
+            <li>Hobbies</li>
+            <li>Entetainment</li>
+            <li>Sports</li>
+            <li>Travel</li>
+          </ul>
+          <ul id="statList" class="sub-cat">
+            <li>Stationary</li>
+            <li>Diaries</li>
+            <li>Calenders</li>
+            <li>Journals</li>
+            <li>NoteBooks</li>
+          </ul>
+        </nav>
+        <script>
+          const booksBtn = document.querySelector("#booksBtn");
+          const ebooksBtn = document.querySelector("#ebooksBtn");
+          const magazineBtn = document.querySelector("#magazineBtn");
+          const stationaryBtn = document.querySelector("#stationaryBtn");
+          const bookList = document.querySelector("#bookList");
+          const ebookList = document.querySelector("#ebookList");
+          const magList = document.querySelector("#magazineList");
+          const statList = document.querySelector("#statList");
+          const subCat = document.querySelectorAll(".sub-cat");
+
+          booksBtn.addEventListener("click", function () {
+            // e.preventDefault();
+            // console.log("test");
+            for (i = 0; i < subCat.length; i++) {
+              subCat[i].style.display = "none";
+            }
+            bookList.style.display = "inline";
+          });
+          ebooksBtn.addEventListener("click", function () {
+            for (i = 0; i < subCat.length; i++) {
+              subCat[i].style.display = "none";
+            }
+            ebookList.style.display = "inline";
+          });
+          magazineBtn.addEventListener("click", function () {
+            for (i = 0; i < subCat.length; i++) {
+              subCat[i].style.display = "none";
+            }
+            magList.style.display = "inline";
+          });
+          stationaryBtn.addEventListener("click", function () {
+            for (i = 0; i < subCat.length; i++) {
+              subCat[i].style.display = "none";
+            }
+            statList.style.display = "inline ";
+          });
+        </script>
+        <section id="mainContainer">
+          <ul id="bestsellers">
+            Bestsellers
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+            <li>Item 10</li>
+          </ul>
+
+          <section id="bannerSection">
+            <img src="#" id="bannerImg" alt="" />
+            <nav>
+              <a href="#"
+                ><img src="#" alt="" id="bestSellerBtn" />Bestseller</a
+              >
+              <a href="#"
+                ><img src="" alt="" id="BestBook23" />Best Books of 2023</a
+              >
+              <a href="#"><img src="#" id="staffPicks" alt="" />Staff Picks</a>
+            </nav>
+          </section>
+        </section>
+        <aside id="popularNow">
+          <img src="#" id="book1" alt="" />
+          <img src="#" id="book2" alt="" />
+          <img src="#" id="book3" alt="" />
+        </aside>
+      </section>
+      <footer>
+        <p>&copy;Copyright 2023, All rights reserved</p>
+        <p>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/T&C">Terms & Condition</a>
+          <a href="/productcontentpolicy">Product Content Policy</a>
+        </p>
+      </footer>
+    </section>
+  </body>
+</html>
